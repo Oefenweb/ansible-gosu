@@ -1,0 +1,41 @@
+# tasks file for gosu
+---
+- name: get download name
+  command: echo gosu-{{ gosu_machine_map[ansible_machine] }}
+  register: _get_download_name
+  changed_when: false
+  tags:
+    - gosu-install-download
+    - gosu-install-download-name
+
+- name: create (download) directory
+  file:
+    path: "{{ gosu_downloads_path }}"
+    state: directory
+    owner: root
+    group: root
+    mode: 0755
+  tags:
+    - gosu-install-download
+    - gosu-install-download-directory
+
+- name: download
+  get_url:
+    url: "https://github.com/tianon/gosu/releases/download/{{ gosu_version }}/{{ _get_download_name.stdout }}"
+    dest: "{{ gosu_downloads_path }}/{{ _get_download_name.stdout }}-{{ gosu_version }}"
+    owner: root
+    group: root
+    mode: 0755
+  tags:
+    - gosu-install-download
+    - gosu-install-download-get
+
+- name: install
+  file:
+    src: "{{ gosu_downloads_path }}/{{ _get_download_name.stdout }}-{{ gosu_version }}"
+    dest: "{{ gosu_install_prefix }}/gosu"
+    state: link
+    force: true
+  tags:
+    - gosu-install-install
+    - gosu-install-install-symlink
