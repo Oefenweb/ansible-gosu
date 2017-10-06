@@ -1,0 +1,7 @@
+# test file for gosu
+---
+- hosts: localhost
+  connection: local
+  become: true
+  roles:
+    - ../../
