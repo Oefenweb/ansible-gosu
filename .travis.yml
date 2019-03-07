@@ -14,6 +14,7 @@ env:
   - ANSIBLE_VERSION=2.6.2
   - ANSIBLE_VERSION=2.6.1
   - ANSIBLE_VERSION=2.6.0
+  - ANSIBLE_VERSION=2.5.15
   - ANSIBLE_VERSION=2.5.14
   - ANSIBLE_VERSION=2.5.13
   - ANSIBLE_VERSION=2.5.12
@@ -67,9 +68,6 @@ script:
 
 notifications:
   email: false
-  hipchat:
-    rooms:
-      secure: 4OsndLbwvF40k6GybACZztWwnPP1XXIIBdSQ76bHRpaNCW/uDCQQJRpFbiSiH/saSv8cFkmO342J6R73o4wjGWw6ln2z2tYVdy8bLCOFNfKTdt8zwYmx90KShXWoF1GkpZPnus9cZnL5audf2L770gcYTNWxP+nwZWZrF65H7lt7g+Jev6eFOZZNHdlyIUS2QJQQ+t6/HEERud3KlgAiUpBW8I6cjcblOhY7XupStRiIt6PZF1lcCHE76KczRZZGrI0DD955NwkYxg0kSujg40kQyQTnUGmCBo9n7Ma2HrmpxSmP/wIX+44VG+lpEYIxV+Vc9PaQR7Yg8GejDWXVT52H22Lxs41itQ6Ys89kwjUgE0BF3tFAVjwvACWra0p5u/G1xXMtf54NwatwRpsSwT9kpuBF1Vv1svuwHWxeMZZhX767itZyyW1fkcMdsTWCFDoe7gLiyDJVRQFS/qfc0QpkswGQeHDQ7yQaMGZwZDVP2Ijv+QnCsd8y+lWowrxgiffuvfqDiOpdqYdycAotBwlnA0hEq4cWhGwrENqOsAh836uGljEURMUk9EG8miIF3BGi2Xw49hUCS46BGc3G4XC7STVQ05/FxX2StXKvwrb/4TMwa1bPkAQzdf+UIafy/oOx1VRq5d0jKR6nlrmx1fLJZBqdiSzOou+FlgQ3fgg=
   webhooks: https://galaxy.ansible.com/api/v1/notifications/
   slack:
     rooms:
