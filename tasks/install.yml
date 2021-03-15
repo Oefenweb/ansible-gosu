@@ -1,4 +1,4 @@
-# tasks file for gosu
+# tasks file
 ---
 - name: create (download) directory
   file:

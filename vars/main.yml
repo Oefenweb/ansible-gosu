@@ -1,4 +1,4 @@
-# vars file for gosu
+# vars file
 ---
 gosu_downloads_path: /var/lib/ansible/gosu/downloads
 gosu_machine_map:

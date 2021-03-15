@@ -1,6 +1,7 @@
-# meta file for gosu
+# meta file
 ---
 galaxy_info:
+  namespace: oefenweb
   role_name: gosu
   author: Mischa ter Smitten
   company: Oefenweb.nl B.V.

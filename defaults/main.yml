@@ -1,4 +1,4 @@
-# defaults file for gosu
+# defaults file
 ---
 gosu_version: '1.12'
 gosu_install_prefix: /usr/local/bin
