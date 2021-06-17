@@ -1,6 +1,6 @@
 ## gosu
 
-[![Build Status](https://travis-ci.org/Oefenweb/ansible-gosu.svg?branch=master)](https://travis-ci.org/Oefenweb/ansible-gosu)
+[![CI](https://github.com/Oefenweb/ansible-gosu/workflows/CI/badge.svg)](https://github.com/Oefenweb/ansible-gosu/actions?query=workflow%3ACI)
 [![Ansible Galaxy](http://img.shields.io/badge/ansible--galaxy-gosu-blue.svg)](https://galaxy.ansible.com/Oefenweb/gosu/)
 
 Set up (the latest or a specific version of) [gosu](https://github.com/tianon/gosu) in Debian-like systems.
