@@ -1,7 +1,7 @@
 # tasks file
 ---
 - name: create (download) directory
-  file:
+  ansible.builtin.file:
     path: "{{ gosu_downloads_path }}"
     state: directory
     owner: root
@@ -12,7 +12,7 @@
     - gosu-install-download-directory
 
 - name: download
-  get_url:
+  ansible.builtin.get_url:
     url: "https://github.com/tianon/gosu/releases/download/{{ gosu_version }}/gosu-{{ gosu_machine_map[ansible_machine] }}"
     dest: "{{ gosu_downloads_path }}/gosu-{{ gosu_machine_map[ansible_machine] }}-{{ gosu_version }}"
     owner: root
@@ -23,7 +23,7 @@
     - gosu-install-download-get
 
 - name: install
-  file:
+  ansible.builtin.file:
     src: "{{ gosu_downloads_path }}/gosu-{{ gosu_machine_map[ansible_machine] }}-{{ gosu_version }}"
     dest: "{{ gosu_install_prefix }}/gosu"
     state: link
