@@ -24,7 +24,7 @@ None
 ---
 - hosts: all
   roles:
-    - gosu
+    - oefenweb.gosu
 ```
 
 #### License
